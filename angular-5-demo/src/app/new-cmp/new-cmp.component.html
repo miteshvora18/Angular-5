@@ -1,0 +1,24 @@
+<div>
+  Months:
+  <select (change) = changeMonths($event)>
+  <option *ngFor="let i of months">{{i}}</option>
+  </select>
+
+  <span *ngIf="isvalid then condition2 else condition1">Condition is valid</span>
+  <ng-template #condition1>Condition is invalid</ng-template>
+  <ng-template #condition2>Condition is valid</ng-template>
+</div>
+<br/>
+<br>
+<button (click)="myClickFunction($event)">
+   Click Me
+</button>
+
+
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+   <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+   <br/>
+   <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+   <br/>
+   <input type = "submit" value = "submit" >
+</form>

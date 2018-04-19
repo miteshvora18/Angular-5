@@ -1,0 +1,10 @@
+<mat-input-container>
+   <input mdInput [matDatepicker]="picker" placeholder="Choose a date">
+   <!-- <button matSuffix [md-datepicker-toggle]="picker"></button> -->
+   <mat-datepicker-toggle mdSuffix [for]="picker"></mat-datepicker-toggle>
+</mat-input-container>
+
+
+
+<mat-datepicker #picker></mat-datepicker>
+
